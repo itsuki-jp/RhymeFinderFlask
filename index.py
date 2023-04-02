@@ -63,6 +63,6 @@ def index():
 def result_get():
     global rhyme_finder
     text = request.args.get("text", "")
-    items = rhyme_finder.search(text)
     print(text)
+    items = rhyme_finder.search(text)
     return render_template("result.html", text=text, items=items)
