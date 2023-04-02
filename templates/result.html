@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block body %}
+<h2>Search Result: {{text}}</h2>
+{% if text == "" %}
+<h3>not found...</h3>
+{% else %}
+<div class="card mx-auto" style="width: 25rem;">
+    <ul class="list-group list-group-flush">
+        {% for item in items %}
+        <li class="list-group-item">{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
