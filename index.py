@@ -70,4 +70,4 @@ def result_get():
 
 if __name__ == "__main__":
     rhyme_finder = App()
-    app.run(port=8000, debug=True)
+    # app.run(port=8000, debug=True)
