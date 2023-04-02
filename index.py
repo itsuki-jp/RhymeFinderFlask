@@ -49,6 +49,7 @@ class App:
         return self.lines_original[left:right]
 
 
+rhyme_finder = App()
 app = Flask(__name__)
 
 
@@ -66,8 +67,3 @@ def result_get():
     print(text, "a")
     items = rhyme_finder.search(text)
     return render_template("result.html", text=text, items=items)
-
-
-if __name__ == "__main__":
-    rhyme_finder = App()
-    # app.run(port=8000, debug=True)
